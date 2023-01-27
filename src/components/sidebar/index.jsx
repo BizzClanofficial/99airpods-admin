@@ -9,7 +9,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-[223px] min-h-screen bg-black pt-11 items-center flex flex-col">
+    <div className="sm:min-w-[223px] min-w-[160px] min-h-screen bg-black pt-11 items-center flex flex-col px-5">
       <img src={Logo} alt="Logo" className="!w-[30px] !h-[38px]" />
       <div className="mt-14 space-y-5">
         <Link

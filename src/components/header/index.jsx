@@ -4,7 +4,7 @@ import Profile from "../../assets/car.jpeg";
 
 const Header = () => {
   return (
-    <div className="py-5 lg:px-9 px-5 w-full flex justify-between h-fit items-center">
+    <div className="py-5 lg:px-9 px-5 w-full flex justify-between gap-5 h-fit items-center">
       <div className="bg-[#F8F8F8] w-[233px] h-12 flex gap-2 items-center px-3 rounded-md focus-within:ring-1">
         <input
           type="search"

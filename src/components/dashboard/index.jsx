@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../header";
 import Sidebar from "../sidebar";
+import People from "../../assets/people.svg";
+import AreaChart from "./area.chart";
 
 const Dashboard = () => {
   return (
@@ -12,6 +14,18 @@ const Dashboard = () => {
           <h4 className="text-[25px] leading-[37.5px] font-semibold text-[#292D32]">
             Dashboard
           </h4>
+          <div className="w-[281px] h-[130px] py-[22px] px-4 bg-white mt-3 rounded-[4px]">
+            <img src={People} alt="People" />
+            <p className="mt-2 text-[#AAA9B7] text-[15px] leading-[22px]">
+              Number of Visitors
+            </p>
+            <h3 className="font-semibold text-[40px] leading-[60px] text-[#0E0D1E]">
+              2,900
+            </h3>
+          </div>
+          <div className="w-full h-[388px] rounded-[4px] bg-white mt-4 p-5">
+            <AreaChart />
+          </div>
         </div>
       </div>
     </div>
