@@ -2,7 +2,12 @@
 
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
+  ],
+
   theme: {
     screens: {
       // From Small to big
