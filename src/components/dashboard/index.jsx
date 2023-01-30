@@ -6,6 +6,7 @@ import AreaChart from "./area.chart";
 import Datepicker from "react-tailwindcss-datepicker";
 
 const Dashboard = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [value, setValue] = useState({
     startDate: new Date(),
     endDate: new Date().setMonth(11),
@@ -16,10 +17,10 @@ const Dashboard = () => {
     setValue(newValue);
   };
   return (
-    <div className="flex font-poppins">
-      <Sidebar />
-      <div className="flex flex-grow flex-col">
-        <Header />
+    <div className="flex font-poppins w-full justify-end">
+      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <div className="sm:w-[calc(100%-223px)] w-full">
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="min-h-[calc(100vh-88px)] h-auto bg-[#F8F8F8] w-full lg:px-9 px-5 pt-6">
           <h4 className="text-[25px] leading-[37.5px] font-semibold text-[#292D32]">
             Dashboard
