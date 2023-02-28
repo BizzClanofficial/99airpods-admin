@@ -5,8 +5,9 @@ import { RxDashboard } from "react-icons/rx";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import clsx from "clsx";
 import { BiLogOut } from "react-icons/bi";
+import { BsPeopleFill } from "react-icons/bs";
 
-const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
+const Sidebar = ({ sidebarOpen }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -43,6 +44,20 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           >
             <MdOutlineSpaceDashboard />
             <p className="text-[15px] leading-[22.5px]">Home Page</p>
+          </Link>
+          <Link
+            to="/users"
+            className={clsx(
+              "flex items-center gap-2 cursor-pointer",
+              location.pathname === "/users" ||
+                location.pathname === "/edit-user" ||
+                location.pathname === "/add-user"
+                ? "text-white"
+                : "text-[#7E7D88] hover:text-white"
+            )}
+          >
+            <BsPeopleFill />
+            <p className="text-[15px] leading-[22.5px]">Users</p>
           </Link>
         </div>
         <button
