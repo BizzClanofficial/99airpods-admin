@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "../header";
 import Sidebar from "../sidebar";
-import People from "../../assets/people.svg";
 import AreaChart from "./area.chart";
 import Datepicker from "react-tailwindcss-datepicker";
 
@@ -18,7 +17,7 @@ const Dashboard = () => {
   };
   return (
     <div className="flex font-poppins w-full justify-end">
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <Sidebar sidebarOpen={sidebarOpen} />
       <div className="sm:w-[calc(100%-223px)] w-full">
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="min-h-[calc(100vh-88px)] h-auto bg-[#F8F8F8] w-full lg:px-9 px-5 pt-6">
@@ -36,7 +35,7 @@ const Dashboard = () => {
             />
           </div>
           <div className="w-[281px] h-[130px] py-[22px] px-4 bg-white mt-3 rounded-[4px]">
-            <img src={People} alt="People" />
+            <img src={"/people.svg"} alt="People" />
             <p className="mt-2 text-[#AAA9B7] text-[15px] leading-[22px]">
               Number of Visitors
             </p>

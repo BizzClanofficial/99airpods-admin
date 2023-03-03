@@ -6,7 +6,7 @@ import Sidebar from "../sidebar";
 
 const EditUser = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [previewImageState, setPreviewImageState] = useState(null);
+  const [previewImageState, setPreviewImageState] = useState("");
 
   const handleSelectImage = (e) => {
     const file = e.target.files[0];
@@ -16,7 +16,7 @@ const EditUser = () => {
 
   return (
     <div className="flex font-poppins w-full justify-end">
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <Sidebar sidebarOpen={sidebarOpen} />
       <div className="sm:w-[calc(100%-223px)] w-full">
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="min-h-[calc(100vh-88px)] h-auto bg-[#F8F8F8] w-full lg:px-9 px-5 pt-6">
@@ -30,7 +30,7 @@ const EditUser = () => {
                   src={previewImageState}
                   alt="Image"
                   className="w-[113px] h-[113px] rounded-full object-cover cursor-pointer"
-                  onClick={() => setPreviewImageState(null)}
+                  onClick={() => setPreviewImageState("")}
                 />
               ) : (
                 <div>
@@ -42,7 +42,7 @@ const EditUser = () => {
                     onChange={handleSelectImage}
                   />
                   <label
-                    for="file"
+                    htmlFor="file"
                     className="w-[113px] h-[113px] rounded-full bg-[#F5F5F5] hover:bg-gray-200 cursor-pointer flex items-center justify-center relative"
                   >
                     <BsPersonFill className="w-[57.41px] h-[65.61px] text-[#D8D8D8]" />

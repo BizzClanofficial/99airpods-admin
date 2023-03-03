@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.png";
 import { RxDashboard } from "react-icons/rx";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import clsx from "clsx";
@@ -18,7 +17,7 @@ const Sidebar = ({ sidebarOpen }) => {
         sidebarOpen ? "left-0" : " sm:left-0 -left-full"
       )}
     >
-      <img src={Logo} alt="Logo" className="!w-[30px] !h-[38px]" />
+      <img src={"/logo.png"} alt="Logo" className="!w-[30px] !h-[38px]" />
       <div className="mt-14 flex flex-col h-full justify-between">
         <div className="space-y-5">
           <Link

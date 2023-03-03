@@ -1,6 +1,5 @@
 import React from "react";
 import { BiSearch } from "react-icons/bi";
-import Profile from "../../assets/car.jpeg";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 
@@ -18,7 +17,7 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
       <div className="flex gap-2 items-center">
         <div className="flex gap-2 bg-[#F8F8F8] rounded-[40px] items-center pr-5 cursor-pointer">
           <img
-            src={Profile}
+            src={"/car.jpeg"}
             alt="Profile"
             className="w-10 h-10 rounded-full object-cover"
           />

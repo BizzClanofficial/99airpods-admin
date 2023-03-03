@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div className="flex font-poppins w-full justify-end">
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <Sidebar sidebarOpen={sidebarOpen} />
       <div className="sm:w-[calc(100%-223px)] w-full">
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <div className="py-5 lg:px-9 px-5 space-y-4">
