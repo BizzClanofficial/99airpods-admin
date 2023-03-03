@@ -21,10 +21,10 @@ const Sidebar = ({ sidebarOpen }) => {
       <div className="mt-14 flex flex-col h-full justify-between">
         <div className="space-y-5">
           <Link
-            to="/dashboard"
+            to="/"
             className={clsx(
               "flex items-center gap-2 cursor-pointer",
-              location.pathname === "/dashboard"
+              location.pathname === "/"
                 ? "text-white"
                 : "text-[#7E7D88] hover:text-white"
             )}
